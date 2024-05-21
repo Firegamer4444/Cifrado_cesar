@@ -111,14 +111,24 @@ public class Main {
                 String texto = scanner.nextLine();
                 System.out.println("Introduzca la clave para cifrar el texto: ");
                 int claveCifrado = scanner.nextInt();
-                System.out.println("Texto cifrado: " + cifradoTexto(texto, claveCifrado));
+                if (claveCifrado < 0){
+                    System.out.println("No se puede poner una clave negativa");
+                }
+                else{
+                    System.out.println("Texto cifrado: " + cifradoTexto(texto, claveCifrado));
+                }
             }
             if (opcion.equals("2")){
                 System.out.println("Introduzca el texto que quieres descifrar: ");
                 String texto = scanner.nextLine();
                 System.out.println("Introduzca la clave para descifrar el texto: ");
                 int claveCifrado = scanner.nextInt();
-                System.out.println("Texto cifrado: " + descifradoTexto(texto, claveCifrado));
+                if (claveCifrado < 0){
+                    System.out.println("No se puede poner una clave negativa");
+                }
+                else{
+                    System.out.println("Texto cifrado: " + descifradoTexto(texto, claveCifrado));
+                }
             }
             if (opcion.equals("3")){
                 scanner.close();
